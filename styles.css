@@ -603,6 +603,15 @@ em {
   pointer-events: none;
   opacity: 0.6;
 }
+/* Whole-card link; the .screen link (z-index 2) stays on top */
+.project__link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.project--linked { cursor: pointer; }
+.project--linked .feature__body,
+.project--linked .feature__points { pointer-events: none; }
 .project:hover {
   border-color: rgba(255, 255, 255, 0.22);
   transform: translateY(-3px);
