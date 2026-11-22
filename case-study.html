@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genome · Case study — Anurag Bhatia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=39" />
+</head>
+<body class="cs-body-root">
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <header class="nav" id="siteNav">
+    <a href="index.html" class="nav__brand" aria-label="Anurag Bhatia">
+      <img src="avatar.png" alt="Anurag Bhatia" class="nav__avatar" />
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="index.html#top">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#experience">Experience</a>
+    </nav>
+    <a href="index.html#contact" class="nav__cta">Contact</a>
+    <span class="nav__status" aria-hidden="true">
+      <span>Available for work</span>
+      <span class="nav__status-dot"></span>
+    </span>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="cs-hero">
+    <div class="cs-hero__wrap">
+      <div class="cs-hero__text">
+        <h1 class="cs-hero__title">
+          Genome — the operating system for group health insurance
+        </h1>
+        <p class="cs-hero__role-label">My Role</p>
+        <p class="cs-hero__role-desc">
+          As the Senior PM, I owned the end-to-end rebuild of Loop Health's claims and policy workflow — serving 600+ enterprise accounts and roughly 2M covered lives across India.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="cs-main">
+    <aside class="cs-toc" aria-label="Case study contents">
+      <a href="index.html" class="cs-toc__back">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Go back
+      </a>
+      <p class="cs-toc__label">Contents</p>
+      <nav>
+        <a href="#backstory" class="is-active">Backstory</a>
+        <a href="#introduction">Introduction</a>
+        <a href="#claims">Claims Flow</a>
+        <a href="#policy">Policy Workflow</a>
+        <a href="#rollout">Platform Rollout</a>
+      </nav>
+    </aside>
+
+    <div class="cs-content">
+
+      <section id="backstory" class="cs-section">
+        <p class="cs-tag">Backstory</p>
+        <h2 class="cs-h2">What was Loop Health solving?</h2>
+        <p>
+          Loop Health is India's fastest-growing group-health insurtech — selling to ~600 mid-market
+          and enterprise accounts, servicing roughly two million covered lives. The business worked.
+          The internal operating surface did not. Claims took 9 days of median TAT; policy admin
+          spanned four tools stitched by spreadsheets; CSAT hovered around 3.8.
+        </p>
+        <p>
+          The directive from the leadership team was blunt: <em>make this product feel like one product</em>,
+          not a stack of workflows glued together. That became Genome — a single operating surface
+          for the Loop Operations and HR-partner surfaces, with claims adjudication, policy edits,
+          premium reconciliation, and member lifecycle all in one place.
+        </p>
+      </section>
+
+      <section id="introduction" class="cs-section">
+        <p class="cs-tag">Introduction</p>
+        <h2 class="cs-h2">What is Genome?</h2>
+        <p>
+          Genome is the internal + partner-facing admin surface for every Loop policy. Ops agents use
+          it to adjudicate claims and reconcile premium. HR managers at client companies use it to
+          add/remove members, run endorsements, and track utilisation. Member support uses it as a
+          single source of truth for the state of any claim.
+        </p>
+        <div class="cs-figure">
+          <div class="cs-figure__inner">
+            <div class="cs-mock cs-mock--row"></div>
+            <div class="cs-mock cs-mock--row"></div>
+            <div class="cs-mock cs-mock--row"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="claims" class="cs-section">
+        <p class="cs-tag">Visuals</p>
+        <h2 class="cs-h2">Claims Flow</h2>
+
+        <div class="cs-arch">
+          <div class="cs-arch__col cs-arch__col--head">
+            <h4>Claims<br/>Architecture</h4>
+          </div>
+          <div class="cs-arch__col">
+            <h4>Intake</h4>
+            <ul><li>Upload + OCR</li><li>Policy match</li><li>Duplicate check</li></ul>
+          </div>
+          <span class="cs-arch__arrow" aria-hidden="true">↔</span>
+          <div class="cs-arch__col">
+            <h4>Adjudication</h4>
+            <ul><li>Rules engine</li><li>Agent review</li><li>Escalation queue</li></ul>
+          </div>
+          <span class="cs-arch__arrow" aria-hidden="true">↔</span>
+          <div class="cs-arch__col">
+            <h4>Payout</h4>
+            <ul><li>Bank disbursal</li><li>SMS + email</li><li>Audit trail</li></ul>
+          </div>
+        </div>
+
+        <div class="cs-mocks-row">
+          <div class="cs-mock cs-mock--sm"></div>
+          <div class="cs-mock cs-mock--sm"></div>
+          <div class="cs-mock cs-mock--sm"></div>
+          <div class="cs-mock cs-mock--sm"></div>
+        </div>
+      </section>
+
+      <section id="policy" class="cs-section">
+        <p class="cs-tag">Visuals</p>
+        <h2 class="cs-h2">Policy Workflow</h2>
+
+        <div class="cs-arch">
+          <div class="cs-arch__col cs-arch__col--head">
+            <h4>Policy<br/>Architecture</h4>
+          </div>
+          <div class="cs-arch__col">
+            <h4>Onboarding</h4>
+            <ul><li>HR invite</li><li>Member upload</li><li>Dependents</li></ul>
+          </div>
+          <span class="cs-arch__arrow" aria-hidden="true">↔</span>
+          <div class="cs-arch__col">
+            <h4>Endorsements</h4>
+            <ul><li>Mid-term edits</li><li>Premium delta</li><li>Approval chain</li></ul>
+          </div>
+          <span class="cs-arch__arrow" aria-hidden="true">↔</span>
+          <div class="cs-arch__col">
+            <h4>Renewals</h4>
+            <ul><li>Quote builder</li><li>Historic claims</li><li>Benefit recs</li></ul>
+          </div>
+        </div>
+
+        <div class="cs-tabs">
+          <button class="cs-tab is-active" type="button">Final</button>
+          <button class="cs-tab" type="button">Iterations</button>
+        </div>
+
+        <div class="cs-annotated">
+          <aside class="cs-note cs-note--yellow">
+            <p>Endorsements had the longest review cycles — most spreadsheet cost lived here.</p>
+          </aside>
+          <aside class="cs-note cs-note--blue">
+            <p>A single "policy diff" view replaced seven back-and-forth emails per edit.</p>
+          </aside>
+          <div class="cs-annotated__row">
+            <div class="cs-mock cs-mock--sm"></div>
+            <div class="cs-mock cs-mock--sm"></div>
+            <div class="cs-mock cs-mock--sm"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="rollout" class="cs-section">
+        <p class="cs-tag">Visuals</p>
+        <h2 class="cs-h2">Platform Rollout</h2>
+        <p>
+          The hardest part wasn't the design — it was the staged rollout across a live book of
+          business. We shadowed every claim for 30 days, dual-ran policy edits for 60, and only
+          sunset the legacy tool after three consecutive weeks of green ops metrics.
+        </p>
+
+        <div class="cs-tabs">
+          <button class="cs-tab is-active" type="button">Final</button>
+          <button class="cs-tab" type="button">Iterations</button>
+        </div>
+
+        <div class="cs-annotated">
+          <div class="cs-annotated__row cs-annotated__row--2">
+            <div class="cs-mock cs-mock--sm"></div>
+            <div class="cs-mock cs-mock--sm"></div>
+          </div>
+          <aside class="cs-note cs-note--yellow cs-note--inline">
+            <strong>62% ↓ TAT</strong>
+            <span>within 11 weeks of go-live — audited against the pre-launch claims cohort.</span>
+          </aside>
+        </div>
+      </section>
+
+      <section class="cs-section cs-end">
+        <p class="cs-tag">That's the end</p>
+        <h2 class="cs-h2">Thanks for reading!</h2>
+        <a href="index.html" class="btn btn--primary cs-end__cta">
+          Back to all work
+          <span aria-hidden="true">→</span>
+        </a>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="cs-footer">
+    <div>© <span class="js-year">2026</span> Anurag Bhatia</div>
+    <div class="cs-footer__links">
+      <a href="https://www.linkedin.com/in/ianuragbhatia/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="#">Email ↗</a>
+      <a href="#">Resume ↗</a>
+    </div>
+  </footer>
+
+  <script src="script.js?v=10"></script>
+</body>
+</html>
