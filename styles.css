@@ -314,6 +314,22 @@ em {
   font-weight: 400;
   color: #4a4a4a;
 }
+.hero__industries {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: -12px 0 32px;
+}
+.hero__industries li {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  padding: 6px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+}
 .hero__sub {
   display: flex;
   flex-direction: column;
