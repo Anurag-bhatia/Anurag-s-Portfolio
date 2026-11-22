@@ -927,7 +927,7 @@ em {
   margin: 0 auto;
   padding: 0 var(--pad) 48px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 .cert {
@@ -994,8 +994,24 @@ a.cert:hover .cert__link { gap: 10px; }
   border-radius: 10px;
   border: 1px solid var(--line);
 }
-@media (max-width: 620px) {
-  .certs__grid { grid-template-columns: 1fr; }
+/* List row: text left, certificate image right */
+.cert--has-image {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 360px);
+  grid-template-rows: auto auto 1fr;
+  column-gap: 32px;
+  row-gap: 10px;
+  align-items: start;
+}
+.cert--has-image .cert__link { align-self: start; }
+.cert--has-image .cert__image {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  margin-top: 0;
+}
+@media (max-width: 720px) {
+  .cert--has-image { grid-template-columns: 1fr; }
+  .cert--has-image .cert__image { grid-column: 1; grid-row: auto; margin-top: 16px; }
 }
 
 /* ---- Contact -------------------------------------------------- */
